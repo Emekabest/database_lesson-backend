@@ -5,6 +5,10 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("<h1>Hello world</h1>");
+});
+
 app.get("/api/products", (req, res) => {
   res.send(data.Workers_Data);
 });
