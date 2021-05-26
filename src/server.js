@@ -9,6 +9,8 @@ app.get("/api/products", (req, res) => {
   res.send(data.Workers_Data);
 });
 
-app.listen(5000, () => {
-  console.log("serve at localhost:5000");
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+  console.log(`serve at localhost:${port}`);
 });
